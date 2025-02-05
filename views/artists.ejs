@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Empire | Artists</title>
+</head>
+<body>
+    <h1>Artists:</h1>
+    <% artists.forEach(artist => { %>
+        <p><%= artist.ArtistId %> - <%= artist.ArtistName %></p>
+        <p><%= artist.recordLabelName %></p>
+    <% }) %>
+</body>
+</html>
