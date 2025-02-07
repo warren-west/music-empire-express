@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Empire | Record Labels</title>
+    <script src="/javascripts/recordLabel.js" defer></script>
+</head>
+<body>
+    <h1>Record Labels</h1>
+    <ul>
+        <% recordLabels.forEach(rl => { %>
+            <li>(<%= rl.recordLabelId %>) <%= rl.recordLabelName %> 
+                <input type="text" placeholder="New label name..." id="<%= rl.recordLabelId %>-input">
+                <button type="button" value="<%= rl.recordLabelId %>" onclick="updateRecordLabel(event)">✏️</button>
+                <button type="button" value="<%= rl.recordLabelId %>" onclick="deleteRecordLabel(event)">☠️</button>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
